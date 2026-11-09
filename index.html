@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Lunch Pre-Order</title>
+</head>
+<body>
+  <h1>School Lunch Pre-Order App</h1>
+  <h2>Today's Lunch Menu</h2>
+
+  <label for="meal">Select your meal:</label>
+  <select id="meal">
+    <option>Pizza</option>
+    <option>Veggie Sandwich</option>
+    <option>Pasta</option>
+  </select>
+
+  <button onclick="submitOrder()">
+    Submit Lunch Order
+  </button>
+
+  <p id="message"></p>
+
+  <script>
+    function submitOrder() {
+      const meal = document.getElementById("meal").value;
+      document.getElementById("message").textContent =
+        "Your order for " + meal + " has been submitted!";
+    }
+  </script>
+</body>
+</html>
